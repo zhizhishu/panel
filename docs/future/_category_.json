@@ -1,0 +1,8 @@
+{
+    "label": "Future",
+    "position": 99,
+    "link": {
+        "type": "generated-index",
+        "description": "Future architecture notes for a beginner-friendly Remnawave orchestrator."
+    }
+}
