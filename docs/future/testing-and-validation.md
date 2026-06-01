@@ -44,6 +44,23 @@ Current observed environment:
 - `docker` is available.
 - `node` and `npm` are not currently installed on the host.
 
+Completed validation:
+
+- Cloned the pushed `future` branch from `https://github.com/zhizhishu/panel.git`.
+- Confirmed commit `20e7a65` was present.
+- Confirmed the Future docs exist:
+  - `docs/future/orchestrator-plan.md`
+  - `docs/future/implementation-classification.md`
+  - `docs/future/testing-and-validation.md`
+- Ran the Docusaurus validation inside Docker with `node:24-bookworm`.
+- `npm ci`, `npm run typecheck`, and `npm run build` completed successfully.
+
+Known build warnings:
+
+- Docusaurus reports upstream broken anchors unrelated to the Future docs:
+  - `/docs/changelog/remnawave-panel` -> `/docs/awesome-remnawave#backup-restore`
+  - `/docs/learn/xray-json-advanced` -> `#addVirtualHostAsOutbound`
+
 Recommended remote smoke test after pushing `future`:
 
 ```bash
